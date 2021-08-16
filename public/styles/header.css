@@ -1,0 +1,10 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #f3f0ed;
+  background-color: #db9535;
+  background-image: url(http://www.transparenttextures.com/patterns/back-pattern.png);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
