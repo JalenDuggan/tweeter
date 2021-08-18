@@ -41,9 +41,7 @@ body {
 
  }
 
- header {
-   margin-top: 120px;
- }
+ 
 
  hr {
   
@@ -124,18 +122,58 @@ h5 {
   transition: 0.3s;
 }
 
-.closebtn:hover {
-  color: black;
+.full-tweet:hover {
+  box-shadow: 0 0 11px rgba(3, 3, 3, 0.2); 
 }
 
 .test .react:hover {
   color: #c7982c;
 }
 
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
-  .nav-bar {
-    display: none;
+.desktop-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+@media (min-width: 1025px) {
+
+  .desktop-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
   }
+
+  .container {
+    margin-right: 2em;
+    margin-top: 6em;
+  }
+
+  header {
+    margin-top: 9.5em;
+    flex-shrink: 2;
+    margin-left: 1.5em;
+    margin-right: 3em;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .nav-bar {
+   
+    background-color: #4056A1;
+    background-image: none;
+   
+  }
+
+  .nav-bar {
+    position: fixed;
+  }
+
 }
 
 

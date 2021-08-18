@@ -12,7 +12,6 @@ $(document).ready(function() {
   $('#submit-tweet').submit(function (event) {
     event.preventDefault();
     const tweet = $( this ).serialize()
-    console.log(tweet);
     if (tweet === 'text=' || tweet === null) {
       $( "#text-amount-error" ).hide();
       if ( $( "#empty-tweet-error" ).is( ":hidden" ) ) {
@@ -73,7 +72,7 @@ const escapeX = function (str) {
 
 
 const createTweetElement = function (tweetObj) {
-  return `<article>
+  return `<article class="full-tweet">
   <div class="other-tweets">
     <div>
       <img class="avatar" src=${escapeX(tweetObj.user.avatars)} alt="avatar">
