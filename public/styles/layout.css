@@ -41,7 +41,9 @@ body {
 
  }
 
- 
+ .container {
+  word-wrap: break-word;
+ }
 
  hr {
   

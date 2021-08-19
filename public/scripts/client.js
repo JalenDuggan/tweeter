@@ -32,15 +32,21 @@ $(document).ready(function() {
         url: "/tweets",
         data: $( this ).serialize(),
       });
-      return loadTweets();
+      
+      return loadTweets(0);
       
     }
   })
 
-  const loadTweets = function () {
+  const loadTweets = function (value) {
     $.ajax('/tweets', { method: 'GET' })
     .then(function (tweetData) {
-      renderTweets(tweetData);
+      $('#tweet-text').val('');
+      if (value) {
+        return renderTweets(tweetData[value]);
+      } else {
+        return renderTweets(tweetData);
+      }
     });
   }
   
@@ -61,6 +67,7 @@ const renderTweets = function(tweets) {
     const container = $("#tweets-container");
     container.prepend($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
   }
+  return;
 
 }
 

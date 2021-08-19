@@ -1,8 +1,5 @@
 $(document).ready(function() {
   // --- our code goes here ---
-  console.log("hello Franco");
-
-
   $("#tweet-text").on("keyup", function() {
     // do something here
     const tweetLength = 140 - ($( this ).val().length)
